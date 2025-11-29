@@ -7,12 +7,14 @@
     ./interface/which-key.nix
     ./interface/noice.nix
     ./interface/colorscheme.nix
-    ./interface/icons.nix
     ./interface/snacks.nix
 
     ./navigation/neo-tree.nix
+
+    ./editing/mini.nix
   ];
 
   plugins.yanky.enable = true;
   plugins.flash.enable = true;
+  plugins.web-devicons.enable = true;
 }
