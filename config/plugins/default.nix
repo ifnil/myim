@@ -8,7 +8,11 @@
     ./interface/noice.nix
     ./interface/colorscheme.nix
     ./interface/icons.nix
+    ./interface/snacks.nix
 
     ./navigation/neo-tree.nix
   ];
+
+  plugins.yanky.enable = true;
+  plugins.flash.enable = true;
 }

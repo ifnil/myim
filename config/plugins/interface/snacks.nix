@@ -17,4 +17,15 @@
       };
     };
   };
+
+  keymaps = [
+    {
+      mode = [ "n" "t" ];
+      key = "<C-/>";
+      action.__raw = "function() require('snacks').terminal.toggle() end";
+      options = {
+        desc = "toggle terminal";
+      };
+    }
+  ];
 }

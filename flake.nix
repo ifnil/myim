@@ -44,5 +44,31 @@
             default = nvim;
           };
         };
+
+      flake = {
+        # Export home-manager module
+        homeModules.default = {
+          imports = [
+            inputs.nixvim.homeManagerModules.nixvim
+          ];
+
+          programs.nixvim = {
+            enable = true;
+            imports = [ ./config ];
+          };
+        };
+
+        # Keep homeManagerModules for backward compatibility
+        homeManagerModules.default = {
+          imports = [
+            inputs.nixvim.homeManagerModules.nixvim
+          ];
+
+          programs.nixvim = {
+            enable = true;
+            imports = [ ./config ];
+          };
+        };
+      };
     };
 }
