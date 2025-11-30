@@ -16,9 +16,9 @@
 
 
       icons = {
-        breadcrumb = " » ";
-        group = " + ";
-        separator = "➜  "; # ➜
+        breadcrumb = "» ";
+        group = " +";
+        separator = "➜  ";
       };
 
       win = {

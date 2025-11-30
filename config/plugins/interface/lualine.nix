@@ -13,6 +13,23 @@
           right = "";
         };
       };
+      sections = {
+        lualine_x = [
+          "encoding"
+          "fileformat"
+          "filetype"
+          {
+            __raw = ''
+              {
+                function() return require("noice").api.status.command.get() end,
+                cond = function() return require("noice").api.status.command.has() end,
+              }
+            '';
+          }
+        ];
+        lualine_y = [ "progress" ];
+        lualine_z = [ "location" ];
+      };
     };
   };
 

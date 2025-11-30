@@ -62,5 +62,11 @@
         end
       '';
     }
+
+    {
+      key = "<Esc><Esc>";
+      action = "<cmd>nohlsearch<cr>";
+      options = { desc = "clear search highlights"; };
+    }
   ];
 }
