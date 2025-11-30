@@ -10,6 +10,7 @@
     ./interface/snacks.nix
 
     ./navigation/neo-tree.nix
+    ./navigation/fzf-lua.nix
 
     ./editing/mini.nix
   ];

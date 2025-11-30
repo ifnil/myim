@@ -1,4 +1,8 @@
 {
+  imports = [
+    ../../keymaps/groups.nix
+  ];
+
   plugins.which-key = {
     enable = true;
 
@@ -10,10 +14,11 @@
         scroll_up = "<c-u>";
       };
 
+
       icons = {
-        breadcrumb = "»";
-        group = "+";
-        separator = "➜"; # ➜
+        breadcrumb = " » ";
+        group = " + ";
+        separator = "➜  "; # ➜
       };
 
       win = {
@@ -27,18 +32,8 @@
   };
 
   extraConfigLua = ''
-    -- Match which-key colors with lualine theme
-    local colors = {
-      bg = "#181616",
-      fg = "#DBD0C6",
-      gray = "#91A4AD",
-      green = "#96C2A1",
-      blue = "#86BFD0",
-      orange = "#F9ADA0",
-      pink = "#D9ADD4",
-      red = "#D2696C",
-      yellow = "#FFD7AA",
-    }
+    -- Which-key colors using global theme palette
+    local colors = _G.theme.colors
 
     -- Main highlight groups
     vim.api.nvim_set_hl(0, "WhichKey", { fg = colors.green })

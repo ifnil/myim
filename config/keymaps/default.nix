@@ -24,6 +24,12 @@
     }
 
     {
+      key = "<leader><space>";
+      action = "<cmd>FzfLua files <cr>";
+      options = { desc = "find files"; };
+    }
+
+    {
       key = "<S-h>";
       action = "<cmd>BufferLineCyclePrev<cr>";
       options = { desc = "go to previous buffer"; };

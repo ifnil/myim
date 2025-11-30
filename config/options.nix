@@ -1,9 +1,9 @@
 {
   config = {
     opts = {
-      virtualedit = "block"; # Allow cursor to move where there is no text in visual block mode
-      cursorline = true; # Highlight the line where the cursor is located
-      cmdheight = 2; # more space in the neovim command line for displaying messages
+      virtualedit = "block";
+      cursorline = true;
+      cmdheight = 2;
       number = true;
       relativenumber = true;
       tabstop = 2;
@@ -21,15 +21,15 @@
       splitbelow = true;
       splitright = true;
       ignorecase = true;
-      smartcase = true; # Don't ignore case with capitals
+      smartcase = true;
       grepprg = "rg --vimgrep";
       grepformat = "%f:%l:%c:%m";
       termguicolors = true;
-      updatetime = 50; # faster completion (4000ms default)
+      updatetime = 50;
       signcolumn = "yes";
       timeoutlen = 250;
-      scrolloff = 8; # Will never have less than 8 characters as you scroll down
-      mouse = "a"; # Mouse
+      scrolloff = 8;
+      mouse = "a";
       encoding = "utf-8";
       fileencoding = "utf-8";
       pumheight = 0;
