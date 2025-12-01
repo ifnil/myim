@@ -13,6 +13,7 @@
       smartindent = true;
       wrap = true;
       breakindent = true;
+      linebreak = true;
       swapfile = false;
       backup = false;
       undofile = true;
