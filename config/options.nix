@@ -1,6 +1,8 @@
 {
   config = {
     opts = {
+      completeopt = "menu,menuone,noselect";
+      confirm = true;
       virtualedit = "block";
       cursorline = true;
       cmdheight = 2;

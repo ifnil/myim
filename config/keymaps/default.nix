@@ -1,5 +1,6 @@
 {
   globals.mapleader = " ";
+  globals.ai_cmp = true;
 
   keymaps = [
     {
