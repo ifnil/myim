@@ -1,4 +1,6 @@
 {
+  globals.root_spec = [ ];
+
   config = {
     opts = {
       completeopt = "menu,menuone,noselect";
@@ -37,6 +39,25 @@
       encoding = "utf-8";
       fileencoding = "utf-8";
       pumheight = 0;
+      sessionoptions = [
+        "buffers"
+        "curdir"
+        "tabpages"
+        "winsize"
+        "help"
+        "globals"
+        "skiprtp"
+        "folds"
+      ];
+      clipboard = "unnamedplus";
+      illchars = {
+        foldopen = "";
+        foldclose = "";
+        fold = " ";
+        foldsep = " ";
+        diff = "╱";
+        eob = " ";
+      };
     };
   };
 }
