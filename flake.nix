@@ -35,31 +35,16 @@
         in
         {
           checks = {
-            # Run `nix flake check .` to verify that your config is not broken
             default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
           };
 
           packages = {
-            # Lets you run `nix run .` to start nixvim
             default = nvim;
           };
         };
 
       flake = {
-        # Export home-manager module
         homeModules.default = {
-          imports = [
-            inputs.nixvim.homeModules.nixvim
-          ];
-
-          programs.nixvim = {
-            enable = true;
-            imports = [ ./config ];
-          };
-        };
-
-        # Keep homeManagerModules for backward compatibility
-        homeManagerModules.default = {
           imports = [
             inputs.nixvim.homeModules.nixvim
           ];
