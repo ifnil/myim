@@ -48,7 +48,7 @@
         "folds"
       ];
       clipboard = "unnamedplus";
-      illchars = {
+      fillchars = {
         foldopen = "";
         foldclose = "";
         fold = " ";
