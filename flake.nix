@@ -49,7 +49,7 @@
         # Export home-manager module
         homeModules.default = {
           imports = [
-            inputs.nixvim.homeManagerModules.nixvim
+            inputs.nixvim.homeModules.nixvim
           ];
 
           programs.nixvim = {
@@ -61,7 +61,7 @@
         # Keep homeManagerModules for backward compatibility
         homeManagerModules.default = {
           imports = [
-            inputs.nixvim.homeManagerModules.nixvim
+            inputs.nixvim.homeModules.nixvim
           ];
 
           programs.nixvim = {
