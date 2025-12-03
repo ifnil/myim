@@ -1,6 +1,4 @@
 {
-  globals.root_spec = [ ];
-
   config = {
     opts = {
       completeopt = "menu,menuone,noselect";
