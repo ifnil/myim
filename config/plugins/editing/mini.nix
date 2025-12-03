@@ -5,6 +5,7 @@
     icons.enable = true;
     pairs.enable = true;
     hipatterns.enable = true;
+    move.enable = true;
 
     indentscope = {
       options = {

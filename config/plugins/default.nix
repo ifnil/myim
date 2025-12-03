@@ -17,6 +17,8 @@
     ./editing/mini.nix
   ];
 
+  plugins.commentary.enable = true;
+  plugins.dial.enable = true;
   plugins.aerial.enable = true;
   plugins.yanky.enable = true;
   plugins.flash.enable = true;

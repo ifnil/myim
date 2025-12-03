@@ -4,7 +4,7 @@
     settings = {
       enabled = true;
       auto_create = true;
-      auto_restore_last_session = true;
+      auto_restore_last_session = false;
     };
   };
 }
