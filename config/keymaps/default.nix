@@ -2,6 +2,12 @@
   globals.mapleader = " ";
   globals.ai_cmp = true;
 
+  imports = [
+    ./groups/code.nix
+    ./groups/quit.nix
+    ./groups/sessions.nix
+  ];
+
   keymaps = [
     {
       key = "<C-h>";
@@ -23,13 +29,6 @@
       action = "<C-w>l";
       options = { desc = "go to right window"; };
     }
-
-    {
-      key = "<leader><space>";
-      action = "<cmd>FzfLua files <cr>";
-      options = { desc = "find files"; };
-    }
-
     {
       key = "<S-h>";
       action = "<cmd>BufferLineCyclePrev<cr>";
@@ -68,6 +67,12 @@
       key = "<Esc><Esc>";
       action = "<cmd>nohlsearch<cr>";
       options = { desc = "clear search highlights"; };
+    }
+
+    {
+      key = "<leader><space>";
+      action = "<cmd>FzfLua files <cr>";
+      options = { desc = "find files"; };
     }
   ];
 }

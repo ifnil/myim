@@ -15,6 +15,13 @@
           bind_to_cwd = false;
         };
 
+        filesystem = {
+          follow_current_file = {
+            enabled = true;
+            leave_dirs_open = true;
+          };
+        };
+
         window = {
           mappings = {
             "<space>" = "none";

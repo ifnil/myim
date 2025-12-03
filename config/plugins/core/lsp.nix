@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   plugins = {
+    lsp-format.enable = true;
     lsp = {
       enable = true;
 
@@ -15,6 +16,12 @@
               command = [ "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt" ];
             };
           };
+        };
+
+        omnisharp.enable = true;
+        roslyn_ls = {
+          enable = true;
+          settings = { };
         };
       };
 
@@ -38,7 +45,5 @@
         };
       };
     };
-
-    lsp-format.enable = true;
   };
 }

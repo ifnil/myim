@@ -8,6 +8,8 @@
     ./interface/noice.nix
     ./interface/colorscheme.nix
     ./interface/snacks.nix
+    ./interface/blankline.nix
+    ./interface/dashboard.nix
 
     ./navigation/neo-tree.nix
     ./navigation/fzf-lua.nix
@@ -15,6 +17,7 @@
     ./editing/mini.nix
   ];
 
+  plugins.aerial.enable = true;
   plugins.yanky.enable = true;
   plugins.flash.enable = true;
   plugins.web-devicons.enable = true;

@@ -3,6 +3,7 @@
     opts = {
       completeopt = "menu,menuone,noselect";
       confirm = true;
+      list = true;
       virtualedit = "block";
       cursorline = true;
       cmdheight = 2;

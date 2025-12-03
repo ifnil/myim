@@ -5,6 +5,8 @@
 
     cmp = {
       enable = true;
+      autoEnableSources = true;
+      autoLoad = true;
 
       settings = {
         snippet.expand = ''
@@ -60,6 +62,8 @@
       };
     };
 
+    cmp-treesitter.enable = true;
+    cmp-ai.enable = true;
     cmp-emoji.enable = true;
     cmp-nvim-lsp.enable = true;
     cmp-buffer.enable = true;
