@@ -5,6 +5,6 @@
     ./lsp.nix
     ./formatting.nix
     ./treesitter.nix
-    ./sessions.nix
+    # ./sessions.nix
   ];
 }
