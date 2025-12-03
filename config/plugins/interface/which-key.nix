@@ -1,8 +1,4 @@
 {
-  imports = [
-    ../../keymaps/groups.nix
-  ];
-
   plugins.which-key = {
     enable = true;
 

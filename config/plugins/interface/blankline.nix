@@ -11,6 +11,7 @@
         filetypes = [
           ""
           "checkhealth"
+          "dashboard"
           "help"
           "lspinfo"
           "packer"

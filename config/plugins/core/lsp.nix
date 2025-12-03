@@ -5,26 +5,6 @@
     lsp = {
       enable = true;
 
-      servers = {
-        nixd = {
-          enable = true;
-          settings = {
-            nixpkgs = {
-              expr = "import <nixpkgs> { }";
-            };
-            formatting = {
-              command = [ "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt" ];
-            };
-          };
-        };
-
-        omnisharp.enable = true;
-        roslyn_ls = {
-          enable = true;
-          settings = { };
-        };
-      };
-
       keymaps = {
         silent = true;
         diagnostic = {
@@ -43,6 +23,64 @@
           "<leader>ca" = "code_action";
           "<leader>cr" = "rename";
         };
+      };
+    };
+  };
+
+  lsp = {
+    servers = {
+      "*" = {
+        enable = true;
+        config = {
+          capabilities = {
+            textDocument = {
+              semanticTokens = {
+                multilineTokenSupport = true;
+              };
+            };
+          };
+          root_markers = [
+            ".git"
+          ];
+        };
+      };
+
+      nixd = {
+        enable = true;
+        config = {
+          nixpkgs = {
+            expr = "import <nixpkgs> { }";
+          };
+          formatting = {
+            command = [ "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt" ];
+          };
+        };
+      };
+
+      omnisharp.enable = true;
+      roslyn_ls = {
+        enable = true;
+      };
+
+      clangd = {
+        enable = true;
+        config = {
+          cmd = [
+            "clangd"
+            "--background-index"
+          ];
+          filetypes = [
+            "c"
+            "cpp"
+          ];
+          root_markers = [
+            "compile_commands.json"
+            "compile_flags.txt"
+          ];
+        };
+      };
+      lua_ls = {
+        enable = true;
       };
     };
   };
