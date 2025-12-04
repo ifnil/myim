@@ -93,18 +93,20 @@
     }
 
     {
-      key = "<Esc><Esc>";
-      action = "<cmd>nohlsearch<cr>";
-      options = {
-        desc = "clear search highlights";
-      };
-    }
-
-    {
       key = "<leader><space>";
       action = "<cmd>FzfLua files <cr>";
       options = {
         desc = "find files";
+      };
+    }
+
+    {
+      mode = [ "v" "x" ];
+      key = "<Esc>";
+      action = "<Esc>";
+      options = {
+        desc = "exit visual mode";
+        noremap = true;
       };
     }
   ];

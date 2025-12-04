@@ -27,4 +27,16 @@ in
       }
     }
   '';
+
+  extraConfigLua = ''
+    -- Clear search highlights when leaving insert mode
+    vim.api.nvim_create_autocmd("InsertLeave", {
+      pattern = "*",
+      callback = function()
+        if vim.v.hlsearch == 1 and vim.fn.mode() == "n" then
+          vim.cmd("nohlsearch")
+        end
+      end,
+    })
+  '';
 }
