@@ -52,6 +52,12 @@
           group = "Label";
           key = "q";
         }
+        {
+          action = "enew";
+          desc = " new ";
+          group = "Label";
+          key = "n";
+        }
       ];
 
       week_header = {

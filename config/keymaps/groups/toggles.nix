@@ -1,3 +1,12 @@
+{ config, ... }:
+let
+  buildToggleFn = opt: ''
+    function()
+      vim.o.${opt} = not vim.o.${opt}
+      vim.notify("toggled ${opt}", vim.log.levels.INFO)
+    end
+  '';
+in
 {
   plugins.which-key.settings.spec = [
     [
@@ -30,6 +39,14 @@
         desc = "toggle format on save";
       };
     }
+
+    {
+      mode = "n";
+      key = "<leader>tr";
+      action.__raw = buildToggleFn "relativenumber";
+      options = {
+        desc = "toggle relative line numbers";
+      };
+    }
   ];
 }
-

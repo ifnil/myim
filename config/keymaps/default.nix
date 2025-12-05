@@ -101,7 +101,18 @@
     }
 
     {
-      mode = [ "v" "x" ];
+      key = "<leader>N";
+      action = "<cmd>NoiceAll<cr>";
+      options = {
+        desc = "notifications";
+      };
+    }
+
+    {
+      mode = [
+        "v"
+        "x"
+      ];
       key = "<Esc>";
       action = "<Esc>";
       options = {

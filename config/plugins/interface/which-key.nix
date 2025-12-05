@@ -10,19 +10,25 @@
         scroll_up = "<c-u>";
       };
 
-
       icons = {
         breadcrumb = "» ";
         group = " +";
         separator = "➜  ";
-      };
-
-      win = {
-        border = "single";
-        padding = [
-          1
-          2
+        rules = [
+          {
+            pattern = "toggle";
+            icon = "";
+            color = "cyan";
+          }
         ];
+
+        win = {
+          border = "single";
+          padding = [
+            1
+            2
+          ];
+        };
       };
     };
   };

@@ -8,6 +8,7 @@
     ./interface/noice.nix
     ./interface/colorscheme.nix
     ./interface/snacks.nix
+    ./interface/telescope.nix
     ./interface/blankline.nix
     ./interface/dashboard.nix
 
