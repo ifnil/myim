@@ -27,7 +27,7 @@
       key = "<leader>xL";
       action = "<cmd>Trouble loclist toggle<cr>";
       options = {
-        desc = "locations";
+        desc = "location list";
       };
     }
     {

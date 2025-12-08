@@ -19,6 +19,7 @@ in
 
   keymaps = [
     {
+      mode = "n";
       key = "<leader>tf";
       action.__raw = ''
         function()
@@ -46,6 +47,19 @@ in
       action.__raw = buildToggleFn "relativenumber";
       options = {
         desc = "toggle relative line numbers";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>td";
+      action.__raw = ''
+        function()
+          vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+        end
+      '';
+      options = {
+        desc = "toggle diagnostic underline";
       };
     }
   ];

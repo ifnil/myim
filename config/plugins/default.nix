@@ -16,8 +16,11 @@
     ./navigation/fzf-lua.nix
 
     ./editing/mini.nix
+
+    ./lang
   ];
 
+  plugins.grug-far.enable = true;
   plugins.commentary.enable = true;
   plugins.dial.enable = true;
   plugins.aerial.enable = true;

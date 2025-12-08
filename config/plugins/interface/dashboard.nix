@@ -29,34 +29,27 @@
       };
 
       shortcut = [
+        # {
+        #   action.__raw = ''
+        #     function()
+        #       require('fzf-lua').files({ cwd = "~/dotfiles" })
+        #     end
+        #   '';
+        #   desc = " dotfiles ";
+        #   group = "Label";
+        #   key = "d";
+        # }
         {
-          action.__raw = "function(path) vim.cmd('FzfLua files') end";
-          desc = " files ";
-          group = "Label";
-          icon_hl = "@variable";
-          key = "f";
-        }
-        {
-          action.__raw = ''
-            function()
-              require('fzf-lua').files({ cwd = "~/dotfiles" })
-            end
-          '';
-          desc = " dotfiles ";
+          action = "enew";
+          desc = " new ";
           group = "Number";
-          key = "d";
+          key = "n";
         }
         {
           action = "quit";
           desc = " quit ";
-          group = "Label";
+          group = "Number";
           key = "q";
-        }
-        {
-          action = "enew";
-          desc = " new ";
-          group = "Label";
-          key = "n";
         }
       ];
 
